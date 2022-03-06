@@ -1,0 +1,30 @@
+[submodule "myjavascript"]
+	path = myjavascript
+	url = git@github.com:sunzhangshuai/myjavascript.git
+[submodule "mygo"]
+	path = mygo
+	url = git@github.com:sunzhangshuai/mygo.git
+[submodule "myjava"]
+	path = myjava
+	url = git@github.com:sunzhangshuai/myjava.git
+[submodule "myc"]
+	path = myc
+	url = git@github.com:sunzhangshuai/myc.git
+[submodule "mydesignmode"]
+	path = mydesignmode
+	url = git@github.com:sunzhangshuai/mydesignmode.git
+[submodule "myalgorithm"]
+	path = myalgorithm
+	url = git@github.com:sunzhangshuai/myalgorithm.git
+[submodule "mydatabase"]
+	path = mydatabase
+	url = git@github.com:sunzhangshuai/mydatabase.git
+[submodule "myos"]
+	path = myos
+	url = git@github.com:sunzhangshuai/myos.git
+[submodule "mymiddleware"]
+	path = mymiddleware
+	url = git@github.com:sunzhangshuai/mymiddleware.git
+[submodule "myes"]
+	path = myes
+	url = git@github.com:sunzhangshuai/myes.git
