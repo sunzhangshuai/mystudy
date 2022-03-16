@@ -6,3 +6,4 @@ git clone git@github.com:sunzhangshuai/mydatastructure.git
 git clone git@github.com:sunzhangshuai/myalgorithm.git
 git clone git@github.com:sunzhangshuai/mydatabase.git
 git clone git@github.com:sunzhangshuai/myjava.git
+git clone git@github.com:sunzhangshuai/myspring.git
