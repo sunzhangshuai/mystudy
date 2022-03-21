@@ -13,6 +13,7 @@
 - [数据库学习笔记](https://github.com/sunzhangshuai/mydatabase)
 - [算法学习笔记](https://github.com/sunzhangshuai/myalgorithm)
 - [spring笔记](https://github.com/sunzhangshuai/myspring)
+- [js笔记](https://github.com/sunzhangshuai/myjavascript)
 
 # 联系作者
 
