@@ -1,13 +1,34 @@
-all:
-	git clone git@github.com:sunzhangshuai/mygo.git mygo
-	git clone git@github.com:sunzhangshuai/mygit.git mygit
-	git clone git@github.com:sunzhangshuai/mymq.git mymq
-	git clone git@github.com:sunzhangshuai/mydesignmode.gt
-	git clone git@github.com:sunzhangshuai/mydatastructure.git
-	git clone git@github.com:sunzhangshuai/myalgorithm.git
-	git clone git@github.com:sunzhangshuai/mydatabase.git
-	git clone git@github.com:sunzhangshuai/myjava.git
-	git clone git@github.com:sunzhangshuai/myspring.git
-	git clone git@github.com:sunzhangshuai/myjavascript.git
-	git clone git@github.com:sunzhangshuai/mylinux.git
-	git clone git@github.com:sunzhangshuai/myc.git
+# 新增的项目加在这里
+PROJECTS := javascript \
+go \
+java \
+spring \
+c \
+linux \
+git \
+mq \
+designmode \
+datastructure \
+algorithm \
+database
+
+define PROJECT
+	git clone git@github.com:sunzhangshuai/my$1.git my$1
+	- $(MAKE) -C my$1
+endef
+
+CLEAN_PROJECTS := $(addprefix clean,$(PROJECTS))
+
+all: $(PROJECTS)
+
+
+
+$(PROJECTS):
+	$(call PROJECT,$@)
+
+clean: $(CLEAN_PROJECTS)
+
+$(CLEAN_PROJECTS):
+	- rm -rf $(subst clean,my,$@)
+
+.PHONY: all clean $(PROJECTS) $(CLEAN_PROJECTS)
