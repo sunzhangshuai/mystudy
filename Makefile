@@ -4,13 +4,11 @@ go \
 java \
 spring \
 c \
-linux \
-git \
-mq \
 designmode \
-datastructure \
 algorithm \
-database
+database \
+os \
+middleware
 
 define PROJECT
 	git clone git@github.com:sunzhangshuai/my$1.git my$1
