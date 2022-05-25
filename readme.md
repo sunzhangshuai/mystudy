@@ -2,7 +2,6 @@
 
 - 语言
   - [java](https://github.com/sunzhangshuai/myjava)
-    - [spring](https://github.com/sunzhangshuai/myspring)
   - [go](https://github.com/sunzhangshuai/mygo)
   - [javascript](https://github.com/sunzhangshuai/myjavascript)
   - [c](https://github.com/sunzhangshuai/myc)
