@@ -11,7 +11,7 @@ middleware
 
 define PROJECT
 	git clone git@github.com:sunzhangshuai/my$1.git my$1
-	@$(MAKE) -C my$1
+	- $(MAKE) -C my$1
 endef
 
 CLEAN_PROJECTS := $(addprefix clean,$(PROJECTS))
