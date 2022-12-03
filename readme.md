@@ -21,28 +21,6 @@
   make
   ```
 
-- **查看某个文档**：e.g. 
-
-  ```shell 。
-  make javascript
-  ```
-
-  > 拉取javascript相关笔记。
-
-- **清空文档**
-
-  ```shell
-  make clean
-  ```
-
-- **清空指定文档**：e.g.
-
-  ```shell
-  make cleanjavascript
-  ```
-
-  > 删除javascript相关笔记。
-
 # 联系作者
 
-zhangshuai1134@gmail.com
+<zhangshuai1134@gmail.com>
