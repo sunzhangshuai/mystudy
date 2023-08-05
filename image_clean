@@ -1,0 +1,48 @@
+#! /bin/sh
+
+while getopts 'o:r' OPT ; do
+  case $OPT in
+  o) P_OBJ="$OPTARG";;
+  r) P_CLEAN=1;;
+  ?) echo "$OPT 不支持";;
+  esac
+done
+
+if [ ! "$P_OBJ" ]; then
+  echo "must input object"
+  exit 1
+fi
+
+cd "$P_OBJ" || exit 1
+grep -rs --exclude-dir={imgs,eddx} "<img src=\"" ./* | sed 's/<img/\n<img/g' | sed -n '/<img/ p' | sed 's/.*<img src=".*imgs\/\([^"]*\)".*/\1/' > imgs_temp1.txt
+echo "绝对路径============"
+grep -rs --exclude-dir={imgs,eddx} "<img src=\"/" ./*
+grep -rs --exclude-dir={imgs,eddx} "!\[.*\]\(.*\)" ./*
+echo "============绝对路径"
+
+
+ls ./imgs > imgs_temp2.txt
+DIFF=$(awk '
+BEGIN {
+  while ((getline < "imgs_temp1.txt") > 0) {
+    img_arr[$0]
+  }
+}
+{
+  if (!($0 in img_arr)) {
+    print $0
+  }
+}
+' imgs_temp2.txt)
+
+rm -f imgs_temp1.txt imgs_temp2.txt
+
+echo "need remove $DIFF"
+
+if [ ! "$P_CLEAN" ]; then
+  exit 0
+fi
+
+for file in $DIFF; do
+  rm -f "imgs/$file" && echo "remove $file success"
+done
